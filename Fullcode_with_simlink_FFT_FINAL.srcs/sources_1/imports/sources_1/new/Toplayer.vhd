@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
---Test code made by Henrik
+--Simulink complete design, everything works except FFT
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
