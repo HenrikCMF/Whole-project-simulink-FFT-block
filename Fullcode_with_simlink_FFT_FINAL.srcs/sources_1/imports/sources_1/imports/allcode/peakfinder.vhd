@@ -128,6 +128,8 @@ case peakfinder is
     -- more detailed description in report
         if res512(ll)>"001000000000000000000000000000000" and ll>1 then--1073741824 then
             harmonics(increment)<=to_unsigned(Maxindex/increment,33);
+        elsif maxindex=1 then
+            harmonics(increment)<="000000000000000000000000000000001";
         else
             harmonics(increment)<=(others => '0');
         end if;
