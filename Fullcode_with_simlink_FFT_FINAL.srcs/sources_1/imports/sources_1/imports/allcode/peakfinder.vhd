@@ -121,11 +121,12 @@ case peakfinder is
         if res512(k)>FFTmax then
             maxindex<=k;
             FFTmax<=res512(k);
+            --ll<=maxindex; --bugfix
         end if;
         k<=k+1;
     when findharmonic => --Looks for harmonics at lower frequencies that have an amplitude above a certain value
     -- more detailed description in report
-        if res512(ll)>"001000000000000000000000000000000" then--1073741824 then
+        if res512(ll)>"001000000000000000000000000000000" and ll>1 then--1073741824 then
             harmonics(increment)<=to_unsigned(Maxindex/increment,33);
         else
             harmonics(increment)<=(others => '0');
